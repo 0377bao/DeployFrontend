@@ -107,6 +107,23 @@ export default function Warehouse3D() {
                 }
             };
             fetchBatchLocation();
+        } else if (location.state?.productId && location.state?.type === 'PRODUCT') {
+            setProductIdFilter(location.state.productId);
+            setTypeFilter('PRODUCT');
+            const fetchProductLocation = async () => {
+                const warehouse = parseToken('warehouse');
+                const res = await getBoxContainProduct(
+                    warehouse.warehouseID,
+                    location.state.productId.trim().toUpperCase(),
+                );
+                if (res.data?.status === 'OK') {
+                    setSearchResult(res.data.data);
+                    if (res.data.data.length === 0) {
+                        toast.success('Không có ô nào chứa sản phẩm này!', styleMessage);
+                    }
+                }
+            };
+            fetchProductLocation();
         }
     }, [location.state]);
 

@@ -113,6 +113,37 @@
     }
 }
 
+.action-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+
+    button {
+        padding: 6px 16px;
+        border-radius: 20px;
+        border: 1px solid #144eb9;
+        cursor: pointer;
+        background-color: white;
+        color: #144eb9;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #144eb9;
+            color: white;
+            box-shadow: 0 2px 5px rgba(20, 78, 185, 0.3);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}
+
 .checkbox-group {
     margin-top: 5px;
     label {

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, use } from 'react';
+import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './ChatBox.module.scss';
 import { X as XClosed } from 'lucide-react';
@@ -7,10 +8,12 @@ import Button from '../Button';
 import { chatWithBot, initChatBox } from '../../services/aiService.service';
 import logo from '@/assets/boxheroAI.png';
 import parseToken from '../../utils/parseToken';
+import { handleAction } from './handleAction';
 
 const cx = classNames.bind(styles);
 
 const ChatBox = ({ classnames, isOpen, closed }) => {
+    const navigate = useNavigate();
     const [messages, setMessages] = useState([]);
     const [sessionId, setSessionId] = useState(null);
     const contentRef = useRef(null);
@@ -81,6 +84,15 @@ const ChatBox = ({ classnames, isOpen, closed }) => {
                                         onClick={() => handleSubmitInput(btn.value)}
                                         style={{ marginRight: 5 }}
                                     >
+                                        {btn.label}
+                                    </Button>
+                                ))}
+                            </div>
+                        )}
+                        {m.type === 'actions' && (
+                            <div className={cx('action-group')}>
+                                {m.actions.map((btn, i) => (
+                                    <Button key={i} onClick={() => handleAction(btn.payload, navigate)}>
                                         {btn.label}
                                     </Button>
                                 ))}
