@@ -122,6 +122,8 @@ const CustomerPage = () => {
         try {
             const res = await filterCustomer(optionFilter);
             setCustomerList(res || []);
+            setTotalPages(1);
+            setPage(1);
         } catch (err) {
             console.log(err);
         }

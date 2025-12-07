@@ -94,18 +94,27 @@ const HistoryTransaction = () => {
             title: 'Người tạo',
             dataIndex: 'employeeCreate',
             key: 'employeeCreate',
-            width: '10%',
+            width: '12%',
             ellipsis: true,
             render: (index, record) => {
+                console.log(record);
                 let employee = null;
+                let employeeID = null;
                 if (record.orderPurchase) {
                     employee = record.orderPurchase.employee;
+                    employeeID = record.orderPurchase.employeeID;
                 } else if (record.orderRelease) {
                     employee = record.orderRelease.employees;
+                    employeeID = record.orderRelease.employeeID;
                 } else if (record.inventoryCheck) {
                     employee = record.inventoryCheck.employee;
+                    employeeID = record.inventoryCheck.employeeID;
                 }
-                return <span>{employee?.employeeName}</span>;
+                return (
+                    <span title={`${employee?.employeeName} - ${employeeID}`}>
+                        {employee?.employeeName} - {employeeID}
+                    </span>
+                );
             },
         },
     ];
@@ -143,7 +152,7 @@ const HistoryTransaction = () => {
         },
         {
             id: 'employeeCreate',
-            label: 'Người tạo giao dịch',
+            label: 'Mã người tạo giao dịch',
             value: employeeCreateFilter,
             setValue: setEmployeeCreateFilter,
         },

@@ -92,10 +92,14 @@ const HistoryLocation = () => {
             title: 'Người tạo',
             dataIndex: 'employeeCreate',
             key: 'employeeCreate',
-            width: '10%',
+            width: '12%',
             ellipsis: true,
             render: (index, record) => {
-                return <span>{record.creator?.employeeName}</span>;
+                return (
+                    <span title={`${record.creator?.employeeName} - ${record.creator?.employeeID}`}>
+                        {record.creator?.employeeName} - {record.creator?.employeeID}
+                    </span>
+                );
             },
         },
         {
@@ -152,7 +156,7 @@ const HistoryLocation = () => {
         },
         {
             id: 'employeeCreate',
-            label: 'Người tạo giao dịch',
+            label: 'Mã người tạo giao dịch',
             value: employeeCreateFilter,
             setValue: setEmployeeCreateFilter,
         },

@@ -25,7 +25,6 @@ const ApproveReleasePage = () => {
         status: 'PENDING',
     });
     const [totalPage, setTotalPage] = useState(0);
-    const employee = useSelector((state) => state.AuthSlice.user);
 
     const columnsFilter = [
         {
@@ -188,13 +187,9 @@ const ApproveReleasePage = () => {
                 handleSubmitFilter={handleSubmitFilter}
                 selectInput={selectFilter}
             >
-                {authIsAdmin(employee) ? (
-                    <Button primary medium onClick={() => setIsCreate(true)} leftIcon={<PlusIcon size={20} />}>
-                        <span>Tạo phiếu đề xuất xuất</span>
-                    </Button>
-                ) : (
-                    <></>
-                )}
+                <Button primary medium onClick={() => setIsCreate(true)} leftIcon={<PlusIcon size={20} />}>
+                    <span>Tạo phiếu đề xuất xuất</span>
+                </Button>
             </ModelFilter>
 
             <div className={cx('content')}>

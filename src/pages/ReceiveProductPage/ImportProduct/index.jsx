@@ -10,6 +10,8 @@ import ModelProposalDetail from '../../ApprovePage/ModelProposalDetail';
 import { fetchOrderPurchase, filterOrderPurchase } from '../../../services/order.service';
 import OrderPurchaseDetail from '../OrderPurchaseDetail';
 import ModelCreateOrderPurchase from '../ModelCreateOrderPurchase';
+import { authIsAdmin } from '../../../common';
+import { useSelector } from 'react-redux';
 
 const cxGlobal = classNames.bind(globalStyle);
 const cx = classNames.bind(styles);
@@ -21,6 +23,7 @@ const ImportProduct = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [showCreateOrderPurchase, setShowCreateOrderPurchase] = useState(false);
     const [totalPage, setTotalPage] = useState(0);
+    const employee = useSelector((state) => state.AuthSlice.user);
 
     const [filter, setFilter] = useState({
         code: '',
@@ -241,15 +244,19 @@ const ImportProduct = () => {
                 }}
                 handleResetFilters={handleResetFilter}
             >
-                <Button
-                    primary
-                    onClick={() => {
-                        setShowCreateOrderPurchase(true);
-                    }}
-                    leftIcon={<Plus size={16} />}
-                >
-                    <span>Tạo phiếu nhập</span>
-                </Button>
+                {authIsAdmin(employee) ? (
+                    <Button
+                        primary
+                        onClick={() => {
+                            setShowCreateOrderPurchase(true);
+                        }}
+                        leftIcon={<Plus size={16} />}
+                    >
+                        <span>Tạo phiếu nhập</span>
+                    </Button>
+                ) : (
+                    <></>
+                )}
             </ModelFilter>
 
             <div className={cx('view-list-proposal')}>

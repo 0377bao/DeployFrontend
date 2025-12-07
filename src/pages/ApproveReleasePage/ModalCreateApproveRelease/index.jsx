@@ -8,7 +8,7 @@ import { generateCode } from '../../../utils/generate';
 import { getProductById, getProductCanExportById } from '../../../services/product.service';
 import toast from 'react-hot-toast';
 import { styleMessage } from '../../../constants';
-import { getAllCustomer } from '../../../services/customer.service';
+import { getAllCustomer, getAllCustomerNotPagination } from '../../../services/customer.service';
 import { Select } from 'antd';
 import { createOrderReleaseProposal, updateStatusOrderReleaseProposal } from '../../../services/proposal.service';
 import globalStyles from '@/components/GlobalStyle/GlobalStyle.module.scss';
@@ -54,7 +54,7 @@ const ModalCreateApproveRelease = ({
 
     useEffect(() => {
         const fetchCustomers = async () => {
-            const res = await getAllCustomer();
+            const res = await getAllCustomerNotPagination();
             if (Array.isArray(res)) {
                 setCustomerOptions(
                     res.map((c) => ({
@@ -64,6 +64,7 @@ const ModalCreateApproveRelease = ({
                     })),
                 );
             }
+            console.log('customerOptions', customerOptions);
         };
         fetchCustomers();
     }, []);
@@ -92,6 +93,7 @@ const ModalCreateApproveRelease = ({
     };
 
     const handleSearchProduct = async (productID) => {
+        if (!productID) return;
         if (typeDetail) {
             if (productID == '') setProposalListItem(initialData.orderReleaseProposalDetails);
             else {
