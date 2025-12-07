@@ -1,0 +1,21 @@
+.wrapper-proposal-page {
+    width: 100%;
+}
+
+.header-tab {
+    width: calc(100vw - var(--max-width-sidebar) - 48px);
+    left: calc(var(--max-width-sidebar) + 20px);
+    top: var(--max-height-header);
+    position: fixed;
+    z-index: var(--z-index-header);
+    // height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: 3px solid #5c7cc2;
+
+    Button {
+        border-radius: 5px 5px 0 0;
+    }
+}

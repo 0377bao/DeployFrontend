@@ -1,0 +1,89 @@
+.wrapper-batch-box-dialog {
+    width: 70vw;
+    padding: 20px;
+
+    .dialog-header {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 15px;
+
+        .dialog-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &::before {
+                content: '📦';
+                font-size: 1.4rem;
+            }
+        }
+
+        .summary-info {
+            display: flex;
+            gap: 20px;
+            font-size: 1.2rem;
+            color: #666;
+
+            .total-boxes,
+            .total-amount {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 5px 10px;
+                background-color: #f8f9fa;
+                border-radius: 6px;
+                border: 1px solid #e9ecef;
+
+                strong {
+                    color: #007bff;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .dialog-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+            content: '📦';
+            font-size: 1.4rem;
+        }
+    }
+
+    .cell-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .cell-number {
+        text-align: right;
+        width: 100%;
+        padding-right: 12px;
+    }
+
+    .button-batch-dialog {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10px;
+    }
+}

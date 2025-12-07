@@ -1,0 +1,121 @@
+.wrapper-login {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.form-login {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    & > h1 {
+        font-size: 3.5rem;
+        width: 50%;
+    }
+
+
+    & > .form {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #d9d9d9;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,.04);
+
+        & > h2 {
+            font-size: 2.5rem;
+            margin-top: 8px;
+        }
+    }
+}
+
+.form > .form-control {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-control > span {
+    display: block;
+    min-width: 80px;
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.form-control > .input-form {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    border: 1px solid #d9d9d9;
+}
+
+.input-form > input {
+    outline: none;
+    border: none;
+    height: 40px;
+    background: none;
+    width: 85%;
+    padding: 0 8px;
+}
+
+.input-form > .icon {
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 80%;
+    border: 1px solid black;
+    margin: 8px auto 0px;
+    background-image: linear-gradient(198deg, var(--primary-button-gradient-one), var(--primary-button-gradient-two));
+
+    & > span {
+        color: white;
+    }
+}
+
+.other {
+    margin: 5px 0;
+    font-size: 1.3rem;
+
+    & > .link-register {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        } 
+    }
+}
+
+.error-message {
+    font-size: 1.3rem;
+    color: red;
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.image-preview {
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+}

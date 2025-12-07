@@ -1,0 +1,46 @@
+.wrapper-product-edit {
+    width: 400px;    
+    height: 300px;
+    position: relative;
+}
+
+.btn-update {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #87CEFF;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    & > label {
+        font-size: 1.6rem;
+        color: red;
+        margin-top: 10px;
+    }
+
+    & > input {
+        font-size: 1.6rem;
+        height: 25px;
+        padding: 0 5px;
+    }
+
+    & > .unit-product {
+        height:  28px;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+}
+

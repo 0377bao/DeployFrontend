@@ -1,0 +1,140 @@
+.wrapper-modal-account {
+    width: 400px;
+    overflow: clip;
+
+    .content {
+        width: 820px;
+        min-height: 100px;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(0px);
+        transition: transform 0.3s linear;
+
+        --max-width-input: 400px;
+
+        .wrapper-email {
+            width: 400px;
+            height: 120px;
+            align-self: center;
+            display: inline-block;
+
+            .form-control {
+                width: var(--max-width-input);
+                height: 35px;
+                margin: 0 0 15px 0;
+                border-radius: 5px;
+                border: 1px solid #d9d9d9;
+                overflow: hidden;
+                background-color: white;
+
+                input {
+                    margin: 0 8px;
+                    width: 95%;
+                    line-height: 35px;
+                    border: none;
+                    background: transparent;
+                    font-size: 1.5rem;
+
+                    &:focus {
+                        outline: none;
+                        background: transparent;
+                    }
+                }
+            }
+
+            .form-action {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                column-gap: 8px;
+                margin-top: 22px;
+            }
+        }
+
+        .wrapper-verify-email {
+            width: 400px;
+            display: inline-block;
+
+            .des-email {
+                font-size: 1.4rem;
+                color: rgb(158, 141, 141);
+            }
+
+            input {
+                width: var(--max-width-input);
+                border-radius: 8px;
+                height: 30px;
+                margin-bottom: 12px;
+                font-size: 1.5rem;
+            }
+            .footer-action {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .wrapper-password {
+            width: 400px;
+            display: inline-block;
+
+            .form-group {
+                width: 100%;
+                margin-bottom: 15px;
+
+                label {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                }
+
+                .form-control {
+                    margin: 10px 0;
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid #d9d9d9;
+                    font-size: 1.5rem;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    input {
+                        border: none;
+                        height: 100%;
+                        width: 85%;
+                        background: transparent;
+                        padding: 0 10px;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            .footer-action {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                column-gap: 8px;
+                margin-top: 22px;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 20px;
+    margin-right: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.message-error {
+    font-size: 1.3rem;
+    color: red;
+    margin: 8px 0;
+}

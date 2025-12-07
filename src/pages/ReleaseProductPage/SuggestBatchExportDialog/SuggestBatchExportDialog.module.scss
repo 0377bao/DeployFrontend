@@ -1,0 +1,76 @@
+.wrapper-suggest-batch {
+    background: #fff;
+    border-radius: 14px;
+    padding: 10px;
+    min-width: 350px;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.priority-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.priority-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.priority-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.icon-info {
+    cursor: pointer;
+    color: #2563eb;
+    transition: color 0.15s;
+}
+
+.icon-info:hover {
+    color: #1746b0;
+}
+
+.action-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+/* Tippy tooltip custom */
+.tippy-box[data-theme~='light'] {
+    background: #222;
+    color: #fff;
+    font-size: 0.98rem;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .wrapper-suggest-batch {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 10px 4px;
+    }
+    .priority-label {
+        min-width: 0;
+        font-size: 1rem;
+    }
+    .Select {
+        min-width: 120px;
+        font-size: 0.98rem;
+    }
+}

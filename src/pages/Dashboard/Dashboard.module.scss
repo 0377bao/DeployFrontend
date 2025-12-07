@@ -1,0 +1,66 @@
+.wrapper-dashboard {
+    width: 100%;
+    padding: 20px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    .chart-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            color: #777;
+        }
+    }
+}
+
+.filter-time {
+    display: flex;
+    align-items: center;
+}
+
+.select-time {
+    margin-left: 10px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    // font-weight: 500;
+}
+
+.table-container {
+    margin-top: 25px;
+}
+
+.bar-chart {
+    cursor: pointer;
+}
+
+.cell-number {
+    text-align: right;
+    padding-right: 5px;
+}

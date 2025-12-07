@@ -1,0 +1,113 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-input {
+    font-family: var(--font-familt);
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: rgba($color: var(--border-color-main), $alpha: 0.06);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    min-height: 40px;
+    padding-right: 9px;
+
+    & svg {
+        cursor: pointer;
+        padding: 5px;
+        margin: 3px;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &:focus-within {
+        border-color: rgba($color: var(--border-color-main), $alpha: 0.2);
+    }
+}
+
+.input-area-group {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    overflow: hidden;
+}
+
+.input-area {
+    max-width: 100%;
+    outline: 0;
+    line-height: 17px;
+    border: none;
+    background-color: transparent;
+    padding: 0 0 0 9px;
+    caret-color: var(--primary);
+    font-size: 1.4rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    resize: none;
+    overflow-y: hidden;
+
+    /* ----- Scrollbar custom cho Webkit browsers (Chrome, Edge, Safari) ----- */
+    &::-webkit-scrollbar {
+        width: 6px; // 👈 chiều rộng thanh cuộn
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; // nền track trong suốt
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2); // màu thumb
+        border-radius: 4px; // bo tròn
+        transition: background-color 0.3s;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.4); // hover đậm hơn
+    }
+
+    /* ----- Scrollbar custom cho Firefox ----- */
+    scrollbar-width: thin; // chiều rộng mảnh
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; // thumb và track
+}
+
+.input-height {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    pointer-events: none;
+}
+
+.limit-text {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 10px;
+    padding-left: 9px;
+}
+
+.btn-post {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: rgba(22, 24, 35, 0.34);
+    align-self: flex-end;
+    height: 40px;
+
+    .active {
+        cursor: pointer;
+        color: blue;
+        font-weight: 700;
+    }
+}

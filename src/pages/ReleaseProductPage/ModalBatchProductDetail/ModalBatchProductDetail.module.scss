@@ -1,0 +1,30 @@
+.wrapper-modal-batch-product {
+    width: 60vw;
+
+    .table-product {
+        width: 100%;
+
+        .table-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+
+    .min-stock-product {
+        text-align: center;
+    }
+}
+
+.group-location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4;
+    justify-content: center;
+
+    .position-item {
+        width: 90%;
+        padding: 4px 8px;
+        border-radius: 5px;
+    }
+}

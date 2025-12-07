@@ -1,0 +1,128 @@
+.wrapper-product-detail {
+    width: 100%;
+}
+
+.product-content {
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+}
+
+.wrapper-image-product {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & > .image-product {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+        outline: none;
+    }
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    & > .row-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > .column-info {
+            width: 100%;
+
+            & > span {
+                font-size: 1.6rem;
+                margin-left: 10px;
+            }
+
+            & > strong {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    & > .row-info:nth-of-type(3) {
+        & > .column-info:first-child {
+            width: 100%;
+            & > span {
+                max-width: 850px;
+                font-size: 1.6rem;
+                line-height: 1.3;
+                margin-left: 0;
+                word-break: break-all;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+.batch {
+    width: 100%;
+    margin-top: 15px;
+
+    & > .my-table {
+        width: 100%;
+    }
+}
+
+.number {
+    margin: 0;
+    text-align: right;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*QRCode product*/
+.wrapper-qrcode {
+    width: 350px;
+    height: 300px;
+
+    & > h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    & > .qrcode-preview {
+        width: 200px;
+        height: 200px;
+        margin: 10px auto;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+
+        & > .qrcode {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & > .action-qrcode {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        column-gap: 10px;
+    }
+}

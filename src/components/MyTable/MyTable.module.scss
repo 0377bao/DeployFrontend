@@ -1,0 +1,30 @@
+.custom-table {
+    width: 100%;
+}
+
+.custom-table {
+    :global(.ant-table-thead > tr > th) {
+        background-color: var(--color-header-table) !important;
+        color: white !important;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+// class custom color header table
+.success {
+    --header-bg: #2563eb;
+    --header-color: #ffffff;
+}
+
+.custom-table.success {
+    --header-bg: #657eb4;
+    --header-color: #ffffff;
+
+    :global(.ant-table-thead > tr > th) {
+        background-color: var(--header-bg) !important;
+        color: var(--header-color) !important;
+        font-weight: 600;
+        text-align: center;
+    }
+}

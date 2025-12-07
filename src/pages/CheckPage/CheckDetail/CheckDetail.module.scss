@@ -1,0 +1,100 @@
+.wrapper-check {
+    width: 100%;
+}
+
+.container-check {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    h4 {
+        padding-left: 10px;
+    }
+}
+
+// info-check
+.info-check {
+    background-color: var(--sidebar-background);
+    border-radius: 10px;
+
+    .form-info {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            label {
+                margin-bottom: 7px;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            input {
+                padding: 8px 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                outline: none;
+                transition: border-color 0.2s ease;
+
+                &:focus,
+                &:focus-visible {
+                    border-color: #1677ff;
+                    box-shadow: 0 0 4px rgba(22, 119, 255, 0.35);
+                }
+            }
+        }
+    }
+}
+
+// filter-check
+.filter-check {
+    background-color: var(--sidebar-background);
+    border-radius: 10px;
+    width: 100%;
+
+    .form-group {
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-left: 10px;
+        width: 100%;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// table check
+.table-check {
+    .title-table {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+
+        .btn-complete-check {
+            background-color: var(--primary-column-receive-warehouse);
+            color: #fff;
+        }
+    }
+}

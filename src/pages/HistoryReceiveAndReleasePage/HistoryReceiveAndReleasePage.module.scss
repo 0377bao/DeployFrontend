@@ -1,0 +1,15 @@
+.wrapper-history {
+    width: 100%;
+
+    .history-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title-history {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+    }
+}

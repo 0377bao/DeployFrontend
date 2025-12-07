@@ -1,0 +1,33 @@
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-indicator.PENDING {
+    background-color: orange;
+}
+
+.status-indicator.APPROVED {
+    background-color: blue; /* Or any other color you prefer for approved */
+}
+
+.status-indicator.COMPLETED {
+    background-color: green;
+}
+
+.status-indicator.REFUSE {
+    background-color: red;
+}
+
+.status-proposal {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+}

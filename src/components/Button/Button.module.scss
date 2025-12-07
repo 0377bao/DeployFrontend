@@ -1,0 +1,124 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    // font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    user-select: none;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        &:hover {
+            cursor: default !important;
+        }
+    }
+}
+
+//Button type
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba($color: var(--border-color-main), $alpha: 0.12);
+
+    &:hover {
+        border-color: rgba($color: var(--border-color-main), $alpha: 0.2);
+        background-color: rgba($color: var(--border-color-main), $alpha: 0.03);
+    }
+}
+
+.primary {
+    color: var(--white);
+    background: linear-gradient(198deg, var(--primary-button-gradient-one), var(--primary-button-gradient-two));
+
+    &:hover {
+        background: linear-gradient(
+            198deg,
+            var(--primary-button-gradient-one-hover),
+            var(--primary-button-gradient-two-hover)
+        );
+    }
+}
+
+.outline {
+    border-color: var(--primary-button-gradient-two-hover);
+    color: var(--primary-button-gradient-two-hover);
+
+    &:hover {
+        background-color: var(--primary--hover-background);
+    }
+}
+
+.success {
+    background-color: var(--success);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--success-hover);
+    }
+}
+
+.error {
+    background-color: var(--error);
+    color: var(--white);
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.active {
+    background-color: var(--active-tab);
+    color: var(--white);
+}
+
+//Button size
+.small {
+    min-width: 60px;
+    padding: 4px 16px;
+}
+
+.medium {
+    min-width: 110px;
+    padding: 8px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 6px;
+}
+
+.icon {
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.borderRadiusSmall {
+    border-radius: 10px;
+}
+
+.borderRadiusMedium {
+    border-radius: 15px;
+}
+
+.borderRadiusLarge {
+    border-radius: 20px;
+}

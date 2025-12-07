@@ -1,0 +1,27 @@
+.wrapper-approve-release-page {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        margin-top: 200px;
+    }
+
+    .title-table {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .footer-table {
+        margin-top: 10px;
+        width: 100%;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,67 @@
+.wrapper-report {
+    position: relative;
+    width: 100%;
+}
+
+.transaction-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-filter {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    margin-top: 12px;
+
+    label {
+        margin-bottom: 5px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 7px;
+    }
+
+    .form-input, select {
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1.2rem;
+    }
+
+
+}
+
+.wrapper-action {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.popper {
+    position: fixed;
+    top: calc(var(--max-height-header) + 10px);
+    left: calc(var(--max-width-sidebar) + 10px);
+    right: 10px;
+    background: white;
+    z-index: 800;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    // transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    height: var(--filter-height-customer);
+}
+
+.content {
+    margin-top: calc(var(--filter-height-customer) + 40px);
+}

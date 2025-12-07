@@ -1,0 +1,38 @@
+.wrapper-approve {
+    width: 100%;
+}
+
+.table-container-header {
+    margin-top: 220px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title-approve {
+        font-size: 2rem;
+        margin: 10px 0 0 0;
+    }
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-end;
+
+    .my-table {
+        width: 100%;
+    }
+}
+
+.model-filter {
+    margin-top: 50px;
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+}

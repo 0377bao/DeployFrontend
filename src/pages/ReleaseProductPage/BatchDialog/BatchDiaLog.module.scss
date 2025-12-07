@@ -1,0 +1,62 @@
+.wrapper-batch-dialog {
+    width: 65vw;
+
+    .header-batch-dialog {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    input[type='checkbox'] {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        &:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    }
+    .cell-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .cell-number {
+        text-align: right;
+        width: 100%;
+        padding-right: 12px;
+    }
+}
+.button-batch-dialog {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+.header-batch-dialog-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.group-suggest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 280px;
+
+    .label {
+        font-size: 1.4rem;
+        text-decoration: underline;
+    }
+}
+
+.custom-select {
+    font-size: 1.3rem;
+    width: 70%;
+}

@@ -1,0 +1,24 @@
+.wrapper-pagination {
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    span {
+        border: 1px solid #1677ff;
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 1.3rem;
+        color: #1677ff;
+        font-weight: 600;
+        background-color: white;
+    }
+
+    .icon {
+        color: rgb(144, 134, 134);
+        cursor: pointer;
+    }
+}

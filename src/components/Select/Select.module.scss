@@ -1,0 +1,21 @@
+.wrapper-selected-custom {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+
+    & > option {
+        font-size: 1.3rem;
+        color: black;
+    }
+
+    &:focus {
+        border: 1px solid rgb(185, 185, 215)
+    }
+
+    &:focus-visible {
+         border: 1px solid rgb(185, 185, 215)
+    }
+}

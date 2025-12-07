@@ -1,0 +1,59 @@
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 5px;
+        font-size: 1.3rem;
+    }
+
+    .form-input {
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        width: 400px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 1.2rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 8px 10px;
+        cursor: pointer;
+    }
+}
+
+.form-actions {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+
+    .btn-submit {
+        margin-right: 10px;
+    }
+
+    .btn-cancel {
+        margin-left: 10px;
+    }
+}
+
+.message-error {
+    color: red;
+    font-size: 1.1rem;
+    margin: 8px 0 0 0;
+    max-width: 400px;
+    word-break: break-word;
+}

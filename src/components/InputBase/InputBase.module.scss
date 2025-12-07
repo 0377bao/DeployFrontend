@@ -1,0 +1,33 @@
+.group-input-search {
+    width: 230px;
+    height: 35px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    margin: 10px 0;
+
+    &>input {
+        flex: 1;
+        font-size: 1.3rem;
+        padding: 0 8px;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &>.icon {
+        width: 15%;
+        cursor: pointer;
+    }
+
+    &:has(input:focus) {
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        border: 1px solid var(--border-color);
+    }
+}
