@@ -235,20 +235,16 @@ const ApprovePage = () => {
                 selectInput={selectFilter}
                 handleSubmitFilter={handleSearch}
             >
-                {authIsAdmin(employee) ? (
-                    <Button
-                        primary
-                        onClick={() => {
-                            setTypeDetail(false);
-                            setShowModalDetail(true);
-                        }}
-                        leftIcon={<Plus size={16} />}
-                    >
-                        <span>Tạo phiếu đề xuất</span>
-                    </Button>
-                ) : (
-                    <></>
-                )}
+                <Button
+                    primary
+                    onClick={() => {
+                        setTypeDetail(false);
+                        setShowModalDetail(true);
+                    }}
+                    leftIcon={<Plus size={16} />}
+                >
+                    <span>Tạo phiếu đề xuất</span>
+                </Button>
             </ModelFilter>
             <div className={cx('table-container-header')}>
                 <h1 className={cx('title-approve')}>{`Danh sách phiếu đề xuất ${formatStatusProposal[

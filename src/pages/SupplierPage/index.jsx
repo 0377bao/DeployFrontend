@@ -28,7 +28,7 @@ const SupplierPage = () => {
     const [page, setPage] = useState(1);
     const [data, setData] = useState([]);
     const [total, setTotal] = useState(0);
-    const pageSize = 9;
+    const pageSize = 5;
     const [supplierId, setSupplierId] = useState(null);
     const [supplierName, setSupplierName] = useState('');
     const [supplierPhone, setSupplierPhone] = useState('');
@@ -323,6 +323,7 @@ const SupplierPage = () => {
                             transactionHistory: (
                                 <Button onClick={() => setIsOpenInfo(true)} small leftIcon={<Eye size={20} />} />
                             ),
+                            statusWork: item.status == 'ACTIVE' ? 'Đang hoạt động' : 'Ngừng hoạt động',
                         })),
                     );
                     setTotal(res.total || 0);

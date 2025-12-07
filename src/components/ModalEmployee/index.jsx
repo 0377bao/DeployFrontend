@@ -5,7 +5,7 @@ import { Button, Image, Modal } from '@/components';
 import { Eye, XCircle, ArrowRightLeft } from 'lucide-react';
 import Tippy from '@tippyjs/react';
 import md5 from 'md5';
-import { formatRole, mapperRole } from '../../constants';
+import { formatRole, mapperRole, styleMessage } from '../../constants';
 import request from '@/utils/httpRequest';
 import { useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
@@ -122,7 +122,7 @@ const ModalEmployee = ({
                     empRole: listRoleUser.filter((item) => item.roleName != mapperRole[e.target.value].roleName),
                 }));
             } else {
-                toast.error('Nhân viên phải có ít nhất một vai trò');
+                toast.error('Nhân viên phải có ít nhất một vai trò', styleMessage);
                 return;
             }
         }
