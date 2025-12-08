@@ -6,8 +6,8 @@ import MyTable from '../../components/MyTable';
 import Tippy from '@tippyjs/react';
 import { Eye, PencilIcon, Plus, HistoryIcon } from 'lucide-react';
 import { ProductDetail, ProductEdit, ModelFilter, Button } from '@/components';
-import { useDispatch, useSelector } from 'react-redux';
-import { startLoading, stopLoading } from '../../lib/redux/loading/slice';
+import { useSelector } from 'react-redux';
+
 import toast from 'react-hot-toast';
 import request, { put } from '../../utils/httpRequest';
 import parseToken from '../../utils/parseToken';
@@ -24,24 +24,6 @@ import { set } from 'lodash';
 import CategoryDialog from './CategoryDialog';
 
 const cx = classNames.bind(styles);
-
-// const dataSource = [
-//     { sku: 'SP001', productName: 'Gạo thơm', minStock: 20 },
-//     { sku: 'SP002', productName: 'Nước mắm Nam Ngư', minStock: 15 },
-//     { sku: 'SP003', productName: 'Đường trắng', minStock: 25 },
-//     { sku: 'SP004', productName: 'Muối i-ốt', minStock: 30 },
-//     { sku: 'SP005', productName: 'Bột ngọt Ajinomoto', minStock: 12 },
-//     { sku: 'SP006', productName: 'Dầu ăn Tường An', minStock: 18 },
-//     { sku: 'SP007', productName: 'Sữa ông thọ', minStock: 10 },
-//     { sku: 'SP008', productName: 'Mì gói Hảo Hảo', minStock: 50 },
-//     { sku: 'SP009', productName: 'Nước suối Lavie', minStock: 40 },
-//     { sku: 'SP010', productName: 'Bánh tráng', minStock: 22 },
-//     { sku: 'SP011', productName: 'Cà phê G7', minStock: 16 },
-//     { sku: 'SP012', productName: 'Trà xanh', minStock: 14 },
-//     { sku: 'SP013', productName: 'Nước ngọt Coca', minStock: 35 },
-//     { sku: 'SP014', productName: 'Khăn giấy', minStock: 28 },
-//     { sku: 'SP015', productName: 'Bột giặt OMO', minStock: 13 },
-// ];
 
 const ProductPage = () => {
     const location = useLocation();
@@ -62,7 +44,7 @@ const ProductPage = () => {
     });
     const query = new URLSearchParams(location.search);
     const productID = query.get('productID');
-    const dispatch = useDispatch();
+
     const [showModalCreateProduct, setShowModalCreateProduct] = useState(false);
     const [totalPage, setTotalPage] = useState(0);
     const [isOpenCategory, setIsOpenCategory] = useState(false);
@@ -81,7 +63,6 @@ const ProductPage = () => {
         try {
             const tokenUser = parseToken('tokenUser');
             console.log('tokenUser', currentUser);
-            dispatch(startLoading());
             // call api lấy thông tin product
             const res = await request.get(`/api/product?productID=${productId}`, {
                 headers: {
@@ -104,14 +85,12 @@ const ProductPage = () => {
             });
             console.log('productDetail', productDetail);
             setProductData(productDetail);
-        } catch (err) {
-            console.log(err);
-        } finally {
             setAction({
                 productId,
                 actionName: 'view',
             });
-            dispatch(stopLoading());
+        } catch (err) {
+            console.log(err);
         }
     };
 
