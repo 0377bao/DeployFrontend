@@ -12,6 +12,7 @@ import ModelProposalDetail from './ModelProposalDetail';
 import { authIsAdmin, convertDateVN } from '../../common';
 import ProposalStatus from '../../components/ProposalStatus';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const cxGlobal = classNames.bind(globalStyle);
@@ -31,6 +32,17 @@ const ApprovePage = () => {
     });
     const [totalPage, setTotalPage] = useState(0);
     const employee = useSelector((state) => state.AuthSlice.user);
+    const location = useLocation();
+
+    useEffect(() => {
+        const query = new URLSearchParams(location.search);
+        const proposalIDParam = query.get('proposalID');
+        if (proposalIDParam) {
+            setProposalDetailID(proposalIDParam);
+            setTypeDetail(true);
+            setShowModalDetail(true);
+        }
+    }, [location.search]);
 
     const columnsFilter = [
         {
