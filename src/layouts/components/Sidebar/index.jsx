@@ -137,13 +137,13 @@ const Sidebar = () => {
                 },
             ],
         },
-        {
-            id: 9,
-            title: 'Thống kê',
-            iconName: FileChartPie,
-            path: '/report',
-            roles: ['SYSTEM_ADMIN', 'WARE_MANAGER'],
-        },
+        // {
+        //     id: 9,
+        //     title: 'Thống kê',
+        //     iconName: FileChartPie,
+        //     path: '/report',
+        //     roles: ['SYSTEM_ADMIN', 'WARE_MANAGER'],
+        // },
     ];
 
     let location = useLocation();
