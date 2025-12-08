@@ -191,7 +191,7 @@ const BoxDetail = ({ isOpen, onClose, boxID, setShowUpdateLocation, setShowChang
                             </div>
                             <div className={cx('field')}>
                                 <label>Chiều cao</label>
-                                <input readOnly value={10} />
+                                <input readOnly value={2} />
                             </div>
                             <div className={cx('field')}>
                                 <label>Tổng thể tích</label>
