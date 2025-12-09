@@ -360,6 +360,12 @@ const AuthPage = () => {
             setSelectedRowKeys(null);
         }
         setAction((prev) => ({ ...prev, [key]: value }));
+        setAccount({
+            email: '',
+            password: '',
+            statusWork: 'Đang làm',
+        });
+        setStatusCreateAccount(false);
         setTimeout(() => {
             setEmpData(resetData);
         }, 1000);
@@ -583,7 +589,9 @@ const AuthPage = () => {
             {showModalAccount && (
                 <ModalCreateAccount
                     isOpen={showModalAccount}
-                    onClose={() => setShowModalAccount((prev) => !prev)}
+                    onClose={() => {
+                        setShowModalAccount((prev) => !prev);
+                    }}
                     setAccount={setAccount}
                     setStatusCreateAccount={setStatusCreateAccount}
                 />
