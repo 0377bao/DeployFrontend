@@ -321,7 +321,7 @@ const ModalReceiveProductMissingDetail = ({ data, isOpen, onClose, reset }) => {
                         </>
                     )}
 
-                    <Button primary onClick={onClose}>
+                    <Button outline onClick={onClose}>
                         <span>Đóng</span>
                     </Button>
                 </div>

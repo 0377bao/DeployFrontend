@@ -2,14 +2,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    // font-weight: 700;
-    padding: 9px 16px;
-    border-radius: 4px;
+    font-size: 1.3rem;
+    padding: 0 16px;
+    height: 36px;
+    min-height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
     cursor: pointer;
     background-color: transparent;
     border: 1px solid transparent;
     user-select: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-weight: 500;
 
     + .wrapper {
         margin-left: 8px;
@@ -27,76 +32,174 @@
 //Button type
 .rounded {
     border-radius: 999px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
-    border-color: rgba($color: var(--border-color-main), $alpha: 0.12);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-color: #e0e7ff; // Indigo 100
 
     &:hover {
-        border-color: rgba($color: var(--border-color-main), $alpha: 0.2);
-        background-color: rgba($color: var(--border-color-main), $alpha: 0.03);
+        border-color: #a5b4fc; // Indigo 300
+        background-color: #eef2ff; // Indigo 50
     }
 }
 
+// Primary - Indigo Gradient (Nổi bật, Khác biệt)
 .primary {
-    color: var(--white);
-    background: linear-gradient(198deg, var(--primary-button-gradient-one), var(--primary-button-gradient-two));
+    color: #ffffff;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); // Gradient Indigo
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
 
     &:hover {
-        background: linear-gradient(
-            198deg,
-            var(--primary-button-gradient-one-hover),
-            var(--primary-button-gradient-two-hover)
-        );
+        background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); // Darker Gradient
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
     }
 }
 
+// Search - Sky Blue (Sáng, Tươi mới, Khác biệt)
+.search {
+    color: #ffffff;
+    background-color: #0ea5e9; // Sky 500
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.25);
+
+    &:hover {
+        background-color: #0284c7; // Sky 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+}
+
+// Outline - Viền Slate nhẹ (Đặt lại, Hủy bỏ, Đóng)
 .outline {
-    border-color: var(--primary-button-gradient-two-hover);
-    color: var(--primary-button-gradient-two-hover);
+    border: 1.5px solid #cbd5e1; // Slate 300
+    color: #475569; // Slate 600
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
     &:hover {
-        background-color: var(--primary--hover-background);
+        background-color: #f8fafc; // Slate 50
+        border-color: #94a3b8; // Slate 400
+        color: #334155; // Slate 700
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 }
 
+// Success - Emerald (Lưu, Xác nhận, Phê duyệt)
 .success {
-    background-color: var(--success);
-    color: var(--white);
+    background-color: #10b981; // Emerald 500
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
 
     &:hover {
-        background-color: var(--success-hover);
+        background-color: #059669; // Emerald 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
     }
 }
 
+// Error - Rose (Xóa, Từ chối)
 .error {
-    background-color: var(--error);
-    color: var(--white);
+    background-color: #f43f5e; // Rose 500
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(244, 63, 94, 0.25);
+
+    &:hover {
+        background-color: #e11d48; // Rose 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+    }
+}
+
+// Warning - Amber (Cảnh báo, Chờ xử lý)
+.warning {
+    background-color: #f59e0b; // Amber 500
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+
+    &:hover {
+        background-color: #d97706; // Amber 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+}
+
+// Info - Indigo nhạt (Thông tin, Xem chi tiết)
+.info {
+    background-color: #6366f1; // Indigo 500
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25);
+
+    &:hover {
+        background-color: #4f46e5; // Indigo 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    }
+}
+
+// Secondary - Slate đậm (actions phụ)
+.secondary {
+    background-color: #64748b; // Slate 500
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(100, 116, 139, 0.25);
+
+    &:hover {
+        background-color: #475569; // Slate 600
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(100, 116, 139, 0.3);
+    }
 }
 
 .text {
+    color: #4f46e5; // Indigo 600
     &:hover {
         text-decoration: underline;
+        color: #4338ca; // Indigo 700
     }
 }
 
 .active {
-    background-color: var(--active-tab);
-    color: var(--white);
+    background-color: #4f46e5; // Indigo 600
+    color: #ffffff;
+    border-radius: 20px;
 }
 
 //Button size
 .small {
     min-width: 60px;
-    padding: 4px 16px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 1.2rem;
 }
 
 .medium {
-    min-width: 110px;
-    padding: 8px 16px;
+    min-width: 100px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0 16px;
 }
 
 .large {
     min-width: 140px;
-    padding: 14px 16px;
+    height: 42px;
+    min-height: 42px;
+    padding: 0 20px;
+    font-size: 1.4rem;
 }
 
 .icon + .title,
@@ -105,18 +208,19 @@
 }
 
 .icon {
-    display: inline-block;
-    min-width: 20px;
-    text-align: center;
-    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    font-size: 1.4rem;
 }
 
 .borderRadiusSmall {
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .borderRadiusMedium {
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .borderRadiusLarge {

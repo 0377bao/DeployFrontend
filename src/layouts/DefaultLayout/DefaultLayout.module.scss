@@ -16,8 +16,8 @@
     width: 150px;
     height: 56px;
     border-radius: 40px;
-    background-color: rgb(33, 35, 40);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-button-gradient-two); // Use theme variable
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Softer shadow
     border: none;
     outline: none;
     // position: fixed;
@@ -36,14 +36,14 @@
     }
 
     &:hover {
-        background-color: rgb(56, 57, 62);
+        background-color: var(--primary-button-gradient-two-hover); // Use theme variable
     }
 }
 
 .group-btn-chat-box {
     display: flex;
     align-items: center;
-    background-color: #e7e7e7;
+    background-color: #f1f5f9; // Slate 100
     padding: 5px;
     border-radius: 10px;
     gap: 10px;

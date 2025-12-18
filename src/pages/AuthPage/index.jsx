@@ -5,7 +5,7 @@ import { Image, Button, ModalCreateAccount, ModalEmployee, ModelFilter, Modal } 
 import { MyTable } from '@/components';
 import globalStyle from '../../components/GlobalStyle/GlobalStyle.module.scss';
 import Tippy from '@tippyjs/react';
-import { Eye, Pencil } from 'lucide-react';
+import { Eye, Pencil, Plus } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { formatRole, styleMessage } from '../../constants';
 import request, { post } from '../../utils/httpRequest';
@@ -569,7 +569,12 @@ const AuthPage = () => {
                 handleSubmitFilter={handleSearch}
                 selectInput={selectBoxFilter}
             >
-                <Button primary onClick={() => handleCloseModal('add', true)} disabled={action.add}>
+                <Button
+                    primary
+                    onClick={() => handleCloseModal('add', true)}
+                    disabled={action.add}
+                    leftIcon={<Plus size={20} />}
+                >
                     <span>Thêm nhân viên</span>
                 </Button>
             </ModelFilter>

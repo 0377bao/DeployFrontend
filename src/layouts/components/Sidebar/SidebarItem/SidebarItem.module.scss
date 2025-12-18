@@ -1,49 +1,56 @@
 .wrapper-link {
     margin: 0 auto;
     width: 90%;
-    height: 35px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    column-gap: 15px;
-    color: black;
+    column-gap: 12px;
+    color: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
     text-decoration: none;
+    padding: 0 12px;
+    transition: all 0.2s ease;
 
     &:hover {
-        background-color: var(--primary--hover-background);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
     }
 
     &.active {
         color: white;
-        background-image: linear-gradient(
-            198deg,
-            var(--primary-button-gradient-one),
-            var(--primary-button-gradient-two)
-        );
+        background-color: rgba(255, 255, 255, 0.25); // White overlay on orange - harmonized
+        font-weight: 600;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     }
 
     &.submenu {
         width: 85%;
         justify-content: flex-end;
         margin: auto;
-        margin: 5px auto;
+        margin: 4px auto;
         column-gap: 0;
+        height: 34px;
 
         .title {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             text-align: left;
-            width: 75%;
+            width: 80%;
             margin-left: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-
     }
 }
 
 .title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: left;
-    width: 60%;
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .wrapper-menu-route {
@@ -55,8 +62,8 @@
     transition: 0.3s;
     visibility: visible;
 
-     & > .wrapper-link {
-            justify-content: center;
+    & > .wrapper-link {
+        justify-content: center;
     }
 
     &.active .chevron-icon {
@@ -67,20 +74,30 @@
     .header-submenu {
         padding: 0 8px;
         width: 100%;
-        height: 35px;
+        height: 38px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        column-gap: 15px;
+        column-gap: 12px;
+        color: rgba(255, 255, 255, 0.75);
+        border-radius: 8px;
+        transition: all 0.2s ease;
 
-        
-        .title {
-            font-size: 1.4rem;
-            text-align: left;
-            width: 62%;
-            display: inline-block;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
         }
 
+        .title {
+            font-size: 1.3rem;
+            text-align: left;
+            width: 65%;
+            display: inline-block;
+            color: inherit;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
 
@@ -92,7 +109,7 @@
     from {
         height: 35px;
     }
-    to{
+    to {
         height: auto;
     }
 }

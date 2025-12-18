@@ -3,28 +3,206 @@
 }
 
 .custom-table {
+    // Table header - Indigo 500 (Brighter, Harmonious)
     :global(.ant-table-thead > tr > th) {
-        background-color: var(--color-header-table) !important;
+        background-color: #6366f1 !important; // Indigo 500
         color: white !important;
         text-align: center;
         font-weight: 600;
+        border-bottom: none !important;
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+
+    // Row styles
+    :global(.ant-table-tbody > tr > td) {
+        padding: 12px 16px;
+        font-size: 13px;
+        border-bottom: 1px solid #e2e8f0; // Slate 200
+    }
+
+    // Alternate row colors
+    :global(.ant-table-tbody > tr:nth-child(even) > td) {
+        background-color: #f8fafc; // Slate 50
+    }
+
+    // Row hover effect
+    :global(.ant-table-tbody > tr:hover > td) {
+        background-color: #f1f5f9 !important; // Slate 100
+    }
+
+    // ============================================
+    // PAGINATION - Modern refined style
+    // ============================================
+    :global(.ant-pagination) {
+        margin-top: 12px;
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    // Pagination items
+    :global(.ant-pagination-item) {
+        border: none !important;
+        background-color: transparent;
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        margin: 0 1px;
+
+        a {
+            color: #475569; // Slate 600
+            font-weight: 500;
+            font-size: 12px;
+        }
+
+        &:hover {
+            background-color: #f1f5f9; // Slate 100
+            a {
+                color: #334155; // Slate 700
+            }
+        }
+    }
+
+    // Active pagination item
+    :global(.ant-pagination-item-active) {
+        background-color: #4f46e5 !important; // Indigo 600 - match sidebar
+        border: none !important;
+
+        a {
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-color: #4338ca !important; // Indigo 700
+        }
+    }
+
+    // Prev/Next buttons - arrow style
+    :global(.ant-pagination-prev),
+    :global(.ant-pagination-next) {
+        border: none !important;
+        background-color: transparent;
+        min-width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: #f1f5f9;
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            color: #64748b;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #3b82f6;
+            }
+        }
+
+        &:global(.ant-pagination-disabled) {
+            button {
+                color: #cbd5e1;
+            }
+        }
+    }
+
+    // Jump to page input
+    :global(.ant-pagination-jump-prev),
+    :global(.ant-pagination-jump-next) {
+        border: none !important;
+        background: transparent;
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: #f1f5f9;
+        }
+    }
+
+    // Page size selector
+    :global(.ant-pagination-options) {
+        margin-left: 16px;
+
+        :global(.ant-select-selector) {
+            border-radius: 6px !important;
+            border: 1px solid #e2e8f0 !important;
+            height: 28px !important;
+            padding: 0 10px !important;
+
+            &:hover {
+                border-color: #3b82f6 !important;
+            }
+        }
+
+        :global(.ant-select-selection-item) {
+            line-height: 26px !important;
+            font-size: 12px;
+            color: #64748b;
+        }
+    }
+
+    // Total text
+    :global(.ant-pagination-total-text) {
+        color: #64748b;
+        font-size: 12px;
+        margin-right: 12px;
     }
 }
 
-// class custom color header table
-.success {
-    --header-bg: #2563eb;
-    --header-color: #ffffff;
+// ============================================
+// TABLE VARIANTS
+// ============================================
+
+// Success variant (Green header)
+.custom-table.success {
+    :global(.ant-table-thead > tr > th) {
+        background-color: #22c55e !important;
+    }
+
+    :global(.ant-pagination-item-active) {
+        background-color: #22c55e !important;
+    }
 }
 
-.custom-table.success {
-    --header-bg: #657eb4;
-    --header-color: #ffffff;
-
+// Warning variant (Amber header)
+.custom-table.warning {
     :global(.ant-table-thead > tr > th) {
-        background-color: var(--header-bg) !important;
-        color: var(--header-color) !important;
-        font-weight: 600;
-        text-align: center;
+        background-color: #f59e0b !important;
+    }
+
+    :global(.ant-pagination-item-active) {
+        background-color: #f59e0b !important;
+    }
+}
+
+// Info variant (Violet header)
+.custom-table.info {
+    :global(.ant-table-thead > tr > th) {
+        background-color: #8b5cf6 !important;
+    }
+
+    :global(.ant-pagination-item-active) {
+        background-color: #8b5cf6 !important;
+    }
+}
+
+// Primary variant (Blue header - default)
+.custom-table.primary {
+    :global(.ant-table-thead > tr > th) {
+        background-color: #3b82f6 !important;
     }
 }

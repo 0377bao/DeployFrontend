@@ -304,7 +304,7 @@ const ModalProductCreate = ({ isOpen, onClose, prefectProductList }) => {
                     <Button outline medium onClick={handleCancel} className={cx('btn-cancel')}>
                         <span>Hủy</span>
                     </Button>
-                    <Button primary medium onClick={handleSubmit} className={cx('btn-submit')}>
+                    <Button success medium onClick={handleSubmit} className={cx('btn-submit')}>
                         <span>Tạo mới</span>
                     </Button>
                 </div>

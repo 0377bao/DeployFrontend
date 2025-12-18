@@ -96,7 +96,6 @@ const ProductHistory = ({ data, onClose }) => {
                     onChangePage={(page) => setCurrentPage(page)}
                     total={totalPages * 5}
                     rowKey={(record, index) => index}
-                    className={'success'}
                 />
             </div>
         </Modal>

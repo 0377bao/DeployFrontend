@@ -72,7 +72,7 @@ const ModelFilter = ({ handleSubmitFilter, handleResetFilters, columns, children
             <div className={cx('wrapper-action')}>
                 {children}
                 <Button
-                    primary
+                    search
                     className={cx('btn-filter')}
                     onClick={handleSubmitFilter}
                     leftIcon={<Search size={15} />}

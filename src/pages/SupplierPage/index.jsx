@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import { MyTable, Button, Modal } from '@/components';
-import { CakeSlice, Eye, PencilIcon } from 'lucide-react';
+import { CakeSlice, Eye, PencilIcon, Plus } from 'lucide-react';
 import styles from './SupplierPage.module.scss';
 import globalStyle from '../../components/GlobalStyle/GlobalStyle.module.scss';
 import Tippy from '@tippyjs/react';
@@ -650,7 +650,7 @@ const SupplierPage = () => {
                 columns={columnsFilter}
                 selectInput={selectFilter}
             >
-                <Button primary onClick={openCreateModal}>
+                <Button primary onClick={openCreateModal} leftIcon={<Plus size={20} />}>
                     <span>Thêm nhà cung cấp</span>
                 </Button>
             </ModelFilter>
